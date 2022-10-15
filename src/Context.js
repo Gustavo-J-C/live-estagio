@@ -1,17 +1,21 @@
 import { useState, useContext, createContext } from 'react'
 import { Navigate } from 'react-router-dom'
+import { io } from 'socket.io-client'
 
-const AuthContext = createContext(null)
+const LiveContext = createContext(null)
 
-export const RoomContext = ({children}) => {
+export const LiveProvider = ({children}) => {
     
+    const [socket, setSocket] = useState(null)
+    // const socket = io.connect("http://localhost:3001")
+
     return (
-        <AuthContext.Provider value={{user, data, login, logout, client, setClient, checkUser}}>
+        <LiveContext.Provider value={{socket, setSocket}}>
             {children}
-        </AuthContext.Provider>
+        </LiveContext.Provider>
     )
 }
 
-export const useAuth = () => {
-    return useContext(AuthContext)
+export const useLive = () => {
+    return useContext(LiveProvider)
 }

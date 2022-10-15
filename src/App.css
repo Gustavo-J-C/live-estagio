@@ -27,7 +27,7 @@
   justify-content: flex-end;
 }
 
-.joinChatContainer {
+.container {
   padding-top: 80px;
   display: flex;
   flex-direction: column;
@@ -35,15 +35,15 @@
   align-items: center;
 }
 
-div.joinChatContainer h4 {
+div.container h4 {
   color: 'white';
 }
 
-.joinChatContainer h3 {
+.container h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-.joinChatContainer input {
+.container input {
   width: 210px;
   height: 40px;
   margin: 7px;
@@ -53,7 +53,7 @@ div.joinChatContainer h4 {
   font-size: 16px;
 }
 
-.joinChatContainer button {
+.container button {
   width: 225px;
   height: 50px;
   margin: 7px;
@@ -66,7 +66,7 @@ div.joinChatContainer h4 {
   cursor: pointer;
 }
 
-.joinChatContainer button:hover {
+.container button:hover {
   background: #2e7d32;
 }
 
