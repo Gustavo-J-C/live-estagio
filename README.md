@@ -2,6 +2,7 @@
 Projeto criado em React JS usando Socket.Io para comunicação em tempo real  
 
 
+
 # Start
 Para rodar o projeto é necessario baixar a versão front-end (esta em questão) e a versão back-end (https://github.com/Gustavo-J-C/live-back-estagio)  
 Basta seguir os seguintes passos para implementação deste projeto front-end
