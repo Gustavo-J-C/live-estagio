@@ -28,15 +28,35 @@
 }
 
 .container {
-  padding-top: 80px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
+  padding: 100px 30px 30px 30px;
+
+  
+}
+
+.container-inputs{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.container-buttons{
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
 }
 
 div.container h4 {
   color: 'white';
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
 }
 
 .container h3 {
@@ -44,30 +64,30 @@ div.container h4 {
   margin-bottom: 1rem;
 }
 .container input {
-  width: 210px;
+  width: 250px;
   height: 40px;
   margin: 7px;
-  border: 2px solid #43a047;
+  border: 2px solid #043872;
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
 }
 
 .container button {
-  width: 225px;
+  width: 265px;
   height: 50px;
   margin: 7px;
   border: none;
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
-  background: #43a047;
+  background: rgb(52, 96, 177);
   color: #fff;
   cursor: pointer;
 }
 
 .container button:hover {
-  background: #2e7d32;
+  background: #050a58;
 }
 
 #chat-room {
@@ -140,7 +160,7 @@ div.container h4 {
   height: auto;
   min-height: 40px;
   max-width: 120px;
-  background-color: #43a047;
+  background-color: #2e55a8;
   border-radius: 5px;
   color: white;
   display: flex;
@@ -221,7 +241,7 @@ div.container h4 {
 }
 
 .chat-window .chat-footer button:hover {
-  color: #43a047;
+  color: #314ead;
 }
 .hide {
   opacity: 0 !important;
@@ -261,4 +281,77 @@ div.container h4 {
   background-color: #3a4950;
   width: 10vw;
   color: #fff;
+}
+
+.top_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+  box-shadow: 0 5px 5px -2px rgba(51, 51, 51, 0.185);
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  background-color: rgb(47, 92, 175);
+  
+
+}
+
+.top_bar-links {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_bar-links_logo {
+  margin-right: 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.top_bar-links_container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5vh;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  letter-spacing: 0.15rem;
+}
+
+.top_bar-links_container a {
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: 22px;
+  line-height: 25px;
+  text-transform: capitalize;
+
+  margin: 0 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 650px) {
+
+  .container-inputs, 
+  .container-buttons{
+    flex-direction: column;
+  }
+
+  .container input {
+    width: 300px;
+
+
+  }
+  
+  .container button {
+    width: 310px;
+  }
+
 }
