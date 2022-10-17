@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "../App.css";
 import { useState } from "react";
 import { useNavigate} from "react-router-dom";
+import Topbar from "../components/TopBar";
 
 export default function Home({ socket }) {
   const navigate = useNavigate();
@@ -39,6 +40,7 @@ export default function Home({ socket }) {
 
   return (
     <>
+      <Topbar />
       <div className="container">
         <h4 >
           Selecione a sala que deseja entrar, ou crie uma nova sala

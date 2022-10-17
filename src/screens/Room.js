@@ -1,9 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import '../App.css'
 
 export default function Room({socket, userName,setShowChat}) {
 
+    const navigate = useNavigate()
     const {room} = useParams();
     const socketId = socket.socketId
     const [message, setMessage] = useState("");
@@ -76,14 +77,14 @@ export default function Room({socket, userName,setShowChat}) {
                     onChange={(e) => setInput(e.target.value)}/>
                 <button className="link-button" onClick={() => setLink(getEmbedLink)}>pesquisar</button>
                 <button className="button-exit"
-                    onClick={() => {setShowChat(false); leaveRoom(room)}}>SAIR DA SALA
+                    onClick={() => navigate('/')}>SAIR DA SALA
                 </button>
             </div>
-            <div socketId="chat-room">
+            <div className="chat-room">
                 <div className="video-window">
                     {link !== "" ? <iframe 
                         allowFullScreen="allowFullScreen"
-                        frameBorder="0" height="400px" 
+                        frameBorder="0" height="500px" 
                         width="100%" 
                         title="video Player" 
                         src={link}/> : null }

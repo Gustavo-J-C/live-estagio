@@ -10,10 +10,10 @@ import Topbar from './components/TopBar';
 export const App = (props) => {
   const api = useLive()
   const socket = io.connect("http://localhost:3001")
+  // const socket = io.connect("https://video-room-app-back.herokuapp.com/")
 
   return (
       <BrowserRouter>
-      <Topbar/>
         <LiveProvider>
           <Routes>
               <Route >

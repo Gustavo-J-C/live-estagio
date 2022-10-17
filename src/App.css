@@ -90,14 +90,27 @@ div.container h4 {
   background: #050a58;
 }
 
-#chat-room {
+.chat-room {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 700px) {
+  .chat-room {
+    flex-direction: column;
+  }
+
+  .video-window {
+    width: 90vw;
+  }
+
+  .chat-window {
+    width: 400px;
+  }
 }
 
 .input-area {
   width: 100vw;
-  display: block;
 }
 .video-window {
   width: 75vw;
@@ -105,7 +118,7 @@ div.container h4 {
 }
 
 .chat-window {
-  width: 300px;
+  width: 20vw;
   margin-left: 10px;
   height: 420px;
 }
@@ -260,7 +273,7 @@ div.container h4 {
 }
 
 .link-input {
-  margin-left: 18px;
+  margin-left: 15px;
   border: 1px solid #2d3a41;
   border-radius: 5px 0 0 5px;
   padding-left: 2px;
@@ -270,7 +283,6 @@ div.container h4 {
 .link-button {
   border: 1px solid #2d3a41;
   border-radius: 0 5px 5px 0;
-  width: 6vw;
 }
 
 .button-exit {
@@ -279,7 +291,6 @@ div.container h4 {
   border: 0;
   border-radius: 10px;
   background-color: #3a4950;
-  width: 10vw;
   color: #fff;
 }
 
