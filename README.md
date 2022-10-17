@@ -1,7 +1,8 @@
 # live-estagio
 Projeto criado em React JS usando Socket.Io para comunicação em tempo real  
 
-
+# online
+Projeto online pode ser acessado em https://video-room-front.vercel.app/
 
 # Start
 Para rodar o projeto é necessario baixar a versão front-end (esta em questão) e a versão back-end (https://github.com/Gustavo-J-C/live-back-estagio)  
